@@ -43,9 +43,6 @@ def find_trends_image():
     plt.close()
     return send_file(img, mimetype='image/png')
 
-    # plt.savefig('graph.png')
-    # return send_file('graph.png', mimetype='image/gif')
-
     
 
 @app.route("/api/trend/<language>", methods=['GET'])
