@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_file
+from flask import request
 import pandas as pd 
 import matplotlib.pyplot as plt 
 from io import BytesIO
@@ -66,7 +67,7 @@ def get_summary():
     return jsonify(summary)
 
 # return an analysis for any csv file the user enters 
-from flask import request
+
 
 @app.route("/api/analyze", methods=['POST'])
 def analyze_data():
